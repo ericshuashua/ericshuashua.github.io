@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Topbar from '../../component/Topbar'
 import './Home.scss'
 import sculpture from '../../assets/sculpture-home.png'
