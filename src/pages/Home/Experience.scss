@@ -1,0 +1,268 @@
+.experience {
+    height: 100vh;
+    background: url('../../assets/noisy-bg.svg');
+    background-color: var(--primary-black);
+    color: white;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-right: 8rem;
+}
+
+.experience-texts {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 2rem;
+    width: 85%;
+}
+
+.arrows {
+    position: relative;
+    left: 5rem;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    justify-content: center
+}
+
+.experience-content {
+    width: 50%;
+    margin-left: 5rem;
+    h3 {
+        font-size: 20px;
+        margin-bottom: 5rem;
+    }
+}
+
+.experience-side {
+    height: 100%;
+    display: flex;
+    text-align: end;
+}
+
+.experience-img {
+    margin: 0;
+    margin-top: 10%;
+    margin-right: 10%;
+    height: 40vh;
+}
+
+.text-turn {
+    position: absolute;
+    bottom: -90vh;
+    transform: rotate(-90deg);
+}
+
+.icon-group {
+    position: 'relative';
+    display: 'flex';
+    flex-direction: 'column';
+    left: 5rem;
+    height: 80vh;
+    gap: 20rem;
+    justify-content: 'center'
+}
+
+.icon-up {
+    color: "#fff";
+    font-size: 30px;
+    animation: bounceup 1s infinite alternate
+}
+
+.icon-down {
+    color: "#fff";
+    font-size: 30px;
+    animation: bouncedown 1s infinite alternate
+}
+
+.icon-up:hover, 
+.icon-down:hover {
+    color: var(--primary-rose);
+    cursor: pointer
+}
+
+@keyframes bounceup {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+}
+@keyframes bouncedown {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.experience-shape-container {
+    position: relative;
+    height: 80vh;
+    top: 1rem;
+    left: 5rem;
+    padding: 1rem;
+}
+
+.title-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: white;
+}
+
+.experience-line {
+    border-left: 2px solid white;
+    margin-left: 8px;
+    height: 70vh;
+}
+
+.text-verticle {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 1rem;
+    z-index: 2;
+}
+
+.zone-title {
+    position: relative;
+    right: 1rem;
+    bottom: 30%;
+    margin: 0;
+    z-index: 2;
+}
+
+.circle4 {
+    position: absolute; /* Make it absolute to align better */
+    right: 1px;
+    bottom: 55%;
+    width: 12rem;
+    height: 12rem;
+    background: radial-gradient(circle at center, #D74E4F 0, #501111 100%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1250px) {
+    .experience-content {
+        margin: 2rem;
+    }
+
+    .arrows {
+        left: 2rem;
+        height: 80vh;
+        gap: 10rem;
+    }
+
+    .experience-shape-container {
+        height: 80vh;
+        top: 1rem;
+        left: 1rem;
+        padding: 0rem;
+    }
+    
+    .experience-img {
+        height: 25vh;
+    }
+
+}
+
+@media screen and (max-width: 925px) {
+    .experience-texts {
+        height: 50vh;
+        width:100%;
+        justify-content: center;
+    }
+
+    .experience-container {
+        padding: 0;
+    }
+
+    .experience-shape-container {
+        display: none;
+    }
+
+    .experience-container {
+        flex-direction: column;
+    }
+
+    .text-verticle {
+        writing-mode: horizontal-tb;
+        text-orientation: upright;
+        letter-spacing: 1rem;
+        font-size: 16px;
+    }
+
+    .experience-img {
+        height: 30vh;
+        margin: 0;
+        margin-top: 1rem;
+        z-index: 2;
+    }
+
+    .circle4 {
+        width: 10em;
+        height: 10em;
+    }
+}
+
+
+@keyframes bounceleft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-10px);
+    }
+}
+@keyframes bounceright {
+    0% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+// .icon-left {
+//     display: none;
+// }
+
+// .icon-right {
+//     display: none;
+// }
+
+
+@media screen and (max-width: 925px) {
+    .circle4 {
+        display: none;
+    }
+
+    .icon-up {
+        display: none;
+    }
+
+    .icon-down {
+        display: none;
+    }
+
+    .icon-left {
+        display: contents;
+        animation: bounceleft 1s infinite alternate
+    }
+
+    .icon-right {
+        display: contents;
+        animation: bounceright 1s infinite alternate
+    }
+}

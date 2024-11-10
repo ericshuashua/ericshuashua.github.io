@@ -18,7 +18,28 @@ import {
 import logo from '../assets/logo.svg';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Photo', 'Article', 'Contact'];
+const navItems = [
+    {
+        "name": 'Home', 
+        "link": '#home'
+    },
+    {
+        "name": 'About',
+        "link": '#about'
+    },
+    {
+        "name": 'Photo',
+        "link": '#photo'
+    },
+    {
+        "name": 'Article',
+        "link": '#article'
+    },
+    {
+        "name": 'Contact',
+        "link": '#contact'
+    }
+];
 
 const Topbar = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -33,9 +54,9 @@ const Topbar = () => {
             <Divider />
             <List>
                 {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center', fontFamily: 'Caveat-Regular' }}>
-                            <ListItemText primary={item} />
+                    <ListItem key={item["name"]} disablePadding>
+                        <ListItemButton sx={{ textAlign: 'center', fontFamily: 'Caveat-Regular' }} href={item["link"]}>
+                            <ListItemText primary={item["name"]} />
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -66,12 +87,16 @@ const Topbar = () => {
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#FF5454', marginRight: '2.5rem', 
-                                ':hover': {
-                                    color: 'white'
-                                }
-                            }}>
-                                {item}
+                            <Button 
+                                key={item["name"]} 
+                                sx={{ color: '#FF5454', marginRight: '2.5rem', 
+                                    ':hover': {
+                                        color: 'white'
+                                    }
+                                }}
+                                href={item["link"]}
+                            >
+                                {item["name"]}
                             </Button>
                         ))}
                     </Box>

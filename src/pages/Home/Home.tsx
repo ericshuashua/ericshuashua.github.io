@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import Topbar from '../../component/Topbar'
 import './Home.scss'
 import sculpture from '../../assets/sculpture-home.png'
+import Experience from './Experience'
+import Gallery from './Gallery'
 
 const Home = () => {
   const jobs = ['Expert contemporary art', 'Photographer', 'Translater']
@@ -28,7 +30,7 @@ const Home = () => {
         <Topbar />
         <div className='home-title'>
           <h1>Cheng Yu</h1>
-          <h1>ZHANG.</h1>
+          <h1 className="lastname">ZHANG.</h1>
           <h3>{jobs[jobIndex]}</h3>
         </div>
         <div className='circle1'></div>
@@ -36,6 +38,8 @@ const Home = () => {
         <div className='circle3'></div>
         <img src={sculpture} alt="sculpture1" className='sculpture1' />
       </div>
+      <Experience />
+      <Gallery />
     </div>
   )
 }
